@@ -14,12 +14,13 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               CircleAvatar(
-                radius: 50.0,
-                backgroundImage: AssetImage('images/sample_png.png'),
+                radius: 50.0, //1
+                backgroundImage: AssetImage('images/sample_png.png'), //2
               ),
               Text(
-                '画像',
+                'sample',
                 style: TextStyle(
+                  fontFamily: 'Raleway', //3
                   fontSize: 40.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -33,5 +34,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// 17 radiusは大きさの指定
-// 18 imageの設定はyamlからassetsで指定する
+//1 radiusは大きさの指定
+//2 imageの設定はyamlからassetsで指定する。AssetImage('パス')で指定する
+//3 style内でfontFamilyを指定することでフォント変更可能

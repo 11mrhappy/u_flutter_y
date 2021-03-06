@@ -24,3 +24,10 @@ flutter:
 
   assets:
     - images/sample_png.png
+
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Italic-VariableFont_wght.ttf
+        - asset: fonts/Raleway-VariableFont_wght.ttf
+          style: italic
