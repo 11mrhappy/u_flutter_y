@@ -31,3 +31,7 @@ flutter:
         - asset: fonts/Raleway-Italic-VariableFont_wght.ttf
         - asset: fonts/Raleway-VariableFont_wght.ttf
           style: italic
+
+    - family: Source Sans Pro
+      fonts:
+        - asset: fonts/SourceSansPro-Regular.ttf
