@@ -36,50 +36,41 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),  //7
-                color: Colors.white,
+              Card(
+                  //7  //9
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0), //8
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
+                child: ListTile( //10
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+81 123 123 123',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+81 123 123 123',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20.0,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'email@gmail.com',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
                     ),
-                    Text(
-                      'email@gmail.com',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro',
-                      ),
-                    )
-                  ],
-                ),
+                  ),
+                )
               )
             ],
           ),
@@ -105,3 +96,5 @@ class MyApp extends StatelessWidget {
 //7 EdgeInsets.allでmarginやpaddingの全方向一定の指定、.onlyで指定した方向に設定できる
 //8 symmetricは上下だけ、左右だけを同じに指定したいときに使う。verticalは上下の値、horizontalは左右の値を指定する。
 //  ちなみにEdgeInsetsには.fromLTRBもあり、leftからbottomまで細かく指定できる
+//9 ここに//7がなくなった理由は、ContainerからCardになり、Cardはpaddingプロパティを持たないため
+//10 ListTileはtitleやleadingらをWidgetとして持っているため、それぞれのウィジェット間に少し空間が生まれる
