@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea( //6
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50.0, //1
@@ -34,6 +35,13 @@ class MyApp extends StatelessWidget {
                   fontSize: 20.0,
                   letterSpacing: 2.5, //5
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(  //11
+                  color: Colors.teal.shade100,
                 ),
               ),
               Card(
@@ -98,3 +106,4 @@ class MyApp extends StatelessWidget {
 //  ちなみにEdgeInsetsには.fromLTRBもあり、leftからbottomまで細かく指定できる
 //9 ここに//7がなくなった理由は、ContainerからCardになり、Cardはpaddingプロパティを持たないため
 //10 ListTileはtitleやleadingらをWidgetとして持っているため、それぞれのウィジェット間に少し空間が生まれる
+//11 Dividerクラスは1pxの線を表示する。childに入れる
